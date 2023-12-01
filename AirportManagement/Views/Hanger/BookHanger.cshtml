@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AirportManagement.Models.Entities.GetAvailablePlanes>
+@{
+    ViewBag.Title = "BookHanger";
+}
+
+<h2>BookHanger</h2>
+
+@using (Html.BeginForm("BookHanger", "Hanger", FormMethod.Post))
+{
+    <p>@TempData["hangerlocation"]</p>
+    <p>@TempData["hangerid"]</p>
+    <select name="SelectedPlaneId" class="form-control">
+        <option value="">Select a plane</option>
+        @if (Model != null)
+        {
+            foreach (var plane in Model)
+            {
+                <option value="@plane.PlaneId">@plane.PlaneId</option>
+            }
+        }
+    </select>
+    <input type="submit" />
+}
+
+@if (ViewBag.msg != null)
+{
+    <p>
+        @ViewBag.msg
+    </p>
+}

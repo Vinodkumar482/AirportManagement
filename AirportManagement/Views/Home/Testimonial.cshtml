@@ -1,0 +1,237 @@
+﻿
+@{
+    ViewBag.Title = "Testimonial";
+}
+
+<h2>Testimonial</h2>
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>@{ ViewBag.Title = "About1"; }</title>
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+    <style>
+
+        body {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+
+        .div1 {
+            border: 1px solid black;
+            width: 500px;
+            height: 280px;
+            position: relative;
+            border-radius: 20px;
+            margin: auto;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+
+
+        .p1 {
+            font-size: 25px;
+            margin-top: -20px;
+            margin-left: 25px;
+            color: green;
+        }
+
+
+
+        .p2 {
+            text-align: justify;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+
+
+        .image1 {
+            width: 80px;
+            height: 80px;
+            border: 1px dashed black;
+            border-radius: 50%;
+            margin-left: 30px;
+            margin-bottom: 40px;
+            padding: 5px;
+        }
+
+
+
+        .name2{
+            display: inline-block;
+            margin-left: 20px;
+            font-weight: bolder;
+            font-size: 20px;
+            position: relative;
+            top: -25px;
+        }
+
+
+
+        .quote {
+            width: 60px;
+            height: 50px;
+            position: relative;
+            top: -30px;
+            left: 400px;
+        }
+
+
+
+        .job {
+            display: inline;
+            position: relative;
+            left: -34%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+
+        <ol class="carousel-indicators">
+
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+
+        </ol>
+
+
+
+        <div class="carousel-inner">
+
+            <div class="item active">
+
+                <div class="div1">
+
+                    <img class="quote" src="~/Content/Images/quote-left(1).png" />
+
+                    @*<img class="quote" src="Content/Images/quote-left.png" />*@
+
+                    <p class="p1">&#10025;&#10025;&#10025;&#10025;&#10025;</p>
+
+                    <p class="p2">TechAir's Airport Management System exceeded my expectations as a traveler. The intuitive self-service kiosks and mobile check-in options made the pre-flight process convenient and stress-free. The system's accurate flight information and proactive notifications ensured I never missed a beat during my travels.</p>
+
+                    <img src="https://media.istockphoto.com/id/1386217759/photo/portrait-of-a-confident-young-businesswoman-standing-against-an-urban-background.jpg?s=1024x1024&w=is&k=20&c=aKFi0_478PRARsw5Akz0Z9KcMqHLjbYoC6R2cNFbzEA=" class="image1" />
+
+                    <p class="name2">Manasa Chandhu</p>
+
+                    <p class="job">Customer</p>
+
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="div1">
+
+                    @*<img class="quote" src="Content/Images/quote-left.png" />*@
+
+                    <img class="quote" src="~/Content/Images/quote-left (1).png" />
+
+                    <p class="p1">&#10025;&#10025;&#10025;&#10025;&#10025;</p>
+
+                    <p class="p2">I can't speak highly enough of my experience with the TechAir Airport Management System. The system's innovative features, like automated bag drop and interactive maps, transformed my airport experience. </p>
+
+                    <img src="~/Content/Images/f1.jpg" class="image1" />
+
+                    <p class="name2">Krishna Chandhu</p>
+
+                    <p class="job">Customer</p>
+
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="div1">
+
+                    <img class="quote" src="~/Content/Images/quote-left(1).png" />
+
+                    <p class="p1">&#10025;&#10025;&#10025;&#10025;&#10025;</p>
+
+                    <p class="p2">As a frequent traveler, I've seen my fair share of airport systems, and TechAir stands out for all the right reasons. The seamless integration of their Airport Management System into every step of the journey is commendable. TechAir's attention to detail truly enhances the traveler's experience. </p>
+
+                    <img src="https://media.istockphoto.com/id/1355398866/photo/portrait-of-beautiful-asian-young-businesswoman.jpg?s=612x612&w=0&k=20&c=1UXQ_M3rk9nJS0jESxK2itlZTk4puR-p58eRKHoOeUg=" class="image1" />
+
+                    <p class="name2">Chaithanya Boini</p>
+
+                    <p class="job">Customer</p>
+
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="div1">
+
+                    <img class="quote" src="~/Content/Images/quote-left(1).png" />
+
+                    <p class="p1">&#10025;&#10025;&#10025;&#10025;&#10025;</p>
+
+                    <p class="p2">My experience with the TechAir Airport Management System has been exceptional. The system's user-friendly interface made my journey through the airport a breeze. The streamlined check-in process, along with real-time flight updates, kept me informed and reduced any travel-related stress. </p>
+
+                    <img src="https://media.istockphoto.com/id/1289834546/photo/success-is-the-main-theme-of-my-story.jpg?s=612x612&w=0&k=20&c=mu2Tury-ji99TGwFJ9vJUAKk-XS5EtWOSwHaOcE6E5o=" class="image1" />
+
+                    <p class="name2">Manas Manohar</p>
+
+                    <p class="job">Customer</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Left and right controls -->
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+
+            <span class="glyphicon glyphicon-chevron-left"></span>
+
+            <span class="sr-only">Previous</span>
+
+        </a>
+
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+
+            <span class="glyphicon glyphicon-chevron-right"></span>
+
+            <span class="sr-only">Next</span>
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>

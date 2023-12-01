@@ -1,0 +1,14 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@500&family=Roboto:ital@0;1&display=swap');
+
+
+
+body {
+    background-color:black;
+}
+
+.navbar .name {
+    color: white; /* Example color */
+    font-size: 1.2rem; /* Example font size */
+    margin-left: 0.5rem; /* Example margin */
+    font-weight:bold;
+}

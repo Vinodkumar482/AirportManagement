@@ -1,0 +1,75 @@
+﻿@model AirportManagement.Models.Entities.LoginCls
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="login-container" id="LoginContainer">
+    @*<video autoplay muted loop id="myLoginVideo">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-outside-a-plane-window-4203-large.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>*@
+    @using (Html.BeginForm())
+
+
+
+    {
+
+
+        <div class=" animated-text" style="width:500px;">
+            <p class="p1">Where Dreams Take Flight and Find Shelter</p>
+            <p class="p2">
+                Customer first <span class="material-symbols-outlined">
+                    star
+                </span> Innovation
+            </p>
+        </div>
+        <div class="div1 d-flex flex-column align-items-center">
+            <div class="text-center">
+                <img src="~/Content/Images/avd.jpg" class="imagelogo" />
+            </div>
+
+
+            <table>
+                <tr>
+                    <td><p class="login-label">Email<span style="color:red;">*</span></p></td>
+                </tr>
+                <tr>
+                    <td>@Html.TextBoxFor(x => x.email, new { id = "email", @class = "inputbox" })</td>
+                </tr>
+                <tr>
+                    <td> @Html.ValidationMessageFor(x => x.email, "", new { @class = "text-danger" })</td>
+                </tr>
+                <tr>
+                    <td><p class="login-label">Password<span style="color:red;">*</span></td>
+                </tr>
+                <tr>
+                    <td class="inputbox">@Html.PasswordFor(x => x.password, new { id = "password", @class = "inputbox" })</td>
+                </tr>
+                <tr>
+                    <td>@Html.ValidationMessageFor(x => x.password, "", new { @class = "text-danger" })</td>
+                </tr>
+
+
+
+                <tr>
+                    <td><input type="submit" value="Login" id="btnlogin" /> </td>
+                </tr>
+                <tr>
+                    <td>
+                        @if (ViewBag.msg != null)
+                        {
+                            <p class="message">@ViewBag.msg</p>
+                        }
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+
+
+    }
+</div>

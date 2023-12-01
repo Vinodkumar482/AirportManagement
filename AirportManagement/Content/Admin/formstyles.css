@@ -1,0 +1,295 @@
+﻿﻿.form {
+    font-family: 'Times New Roman';
+}
+
+.field-validation-error {
+    color: red;
+}
+
+
+
+.add-plane-btn {
+    margin-right: 40px; /* Adjust the margin value as needed */
+}
+
+
+
+.card-body {
+    justify-content: center;
+}
+
+
+
+.marginclass {
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+.Gender-textbox {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    height: 45px;
+    padding: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.custom-textbox {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+    height: 45px;
+    padding: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+    .custom-textbox:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        outline: none;
+    }
+
+
+
+
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+
+.custom-button-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+
+
+.custom-button-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+
+
+.custom-button:hover {
+    background-color: #fca86c;
+    color: #fff;
+}
+
+
+
+.custom-button:active {
+    background-color: #003366;
+}
+
+
+
+.status-message {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: green;
+}
+
+
+
+.status-message {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: green;
+}
+
+.form-card {
+    margin-top: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(#EBE4E4,#DBD8D9);
+    border-width: 1px;
+    border-style: solid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+    .form-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+
+.custom-textbox:hover, .Gender:hover, .custom-textarea:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.pilotform {
+    height: 100%;
+}
+/* PilotStyles.css */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.custom-textarea {
+    height: 100px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.label {
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.validation-msg {
+    color: red;
+}
+
+.spinner-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.center-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Custom CSS for button alignment */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.Get-hangers-form {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(#EBE4E4,#DBD8D9);
+    border-width: 1px;
+    border-style: solid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.center-content {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the custom table-like container */
+.custom-table {
+    width: 90%;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.custom-status-table {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+}
+
+.table-header {
+    display: flex;
+    background-color: #f2f2f2;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-cell {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+
+    .table-cell:last-child {
+        border-right: none;
+    }
+
+.table-row {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+    .table-row:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+.text-danger {
+    color: red;
+    margin-top: 10px;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+/* Custom CSS for table centering */
+
+
+.status-center-content {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    margin-top: 130px;
+}

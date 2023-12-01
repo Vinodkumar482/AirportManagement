@@ -1,0 +1,220 @@
+﻿﻿@model AirportManagement.Models.Entities.AddPlane
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<section class="pilotform">
+    <div class="spinner-container">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="container pt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-8 col-lg-6 col-xl-7 mt-3 mb-3">
+                <div class="form-card mb-4" style="border-radius: 15px;">
+                    <div class="card-body marginclass" id="myForm">
+                        @using (Html.BeginForm())
+                        {
+                            <h2 class="form-name">Add Plane Details</h2>
+                            <div class="row">
+                                <!-- First Part of the Form (Left Column) -->
+                                <div class="col-md-6">
+                                    <!-- ... (Existing code for the first part of the form) ... -->
+                                    <div class="row align-items-center pt-2 slide-in">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("Manufacturer Name")<span class="text-danger">*</span></h6>
+                                            @Html.TextBox("ManufacturerName", null, new { @class = "custom-textbox" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("ManufacturerName")
+                                        </div>
+
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Registration Number")<span class="text-danger">*</span></h6>
+                                                @Html.TextBox("RegistrationNo", null, new { @class = "custom-textbox" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("RegistrationNo")
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Model Number")<span class="text-danger">*</span></h6>
+                                                @Html.TextBox("ModelNo", null, new { @class = "custom-textbox" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("ModelNo")
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Plane Name")<span class="text-danger">*</span></h6>
+                                                @Html.TextBox("PlaneName", null, new { @class = "custom-textbox" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("PlaneName")
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Capacity")<span class="text-danger">*</span></h6>
+                                                @Html.TextBox("Capacity", null, new { @class = "custom-textbox" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("Capacity")
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Email Address")<span class="text-danger">*</span></h6>
+                                                @Html.TextBox("Email", null, new { @class = "custom-textbox" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("Email")
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Owner Name")<span class="text-danger">*</span></h6>
+                                                @Html.TextBox("OwnerName", null, new { @class = "custom-textbox", disabled = "disabled" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("OwnerName")
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- Second Part of the Form (Right Column) -->
+                                <div class="col-md-6 slide-in">
+                                    <!-- ... (Existing code for the second part of the form) ... -->
+
+
+
+                                    <div class="row align-items-center pt-2">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("House Number")<span class="text-danger">*</span></h6>
+                                            @Html.TextBox("HouseNo", null, new { @class = "custom-textbox", disabled = "disabled" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("HouseNo")
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center pt-2">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("City")<span class="text-danger">*</span></h6>
+                                            @Html.TextBox("City", null, new { @class = "custom-textbox", disabled = "disabled" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("City")
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center pt-2">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("State")<span class="text-danger">*</span></h6>
+                                            @Html.TextBox("State", null, new { @class = "custom-textbox", disabled = "disabled" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("State")
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center pt-2">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("Country")<span class="text-danger">*</span></h6>
+                                            @Html.TextBox("Country", null, new { @class = "custom-textbox", disabled = "disabled" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("Country")
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center pt-2">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("Pincode")<span class="text-danger">*</span></h6>
+                                            @Html.TextBox("PinNo", null, new { @class = "custom-textbox", disabled = "disabled" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("PinNo")
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center pt-2">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("AddressLine")<span class="text-danger">*</span></h6>
+                                            @Html.TextArea("AddressLine", null, new { @class = "custom-textarea", disabled = "disabled" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("AddressLine")
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- Add Pilot and Reset Buttons -->
+                            <div class="row justify-content-center mt-4">
+                                <div class="col-md-4 text-center">
+                                    <button type="submit" name="PlaneBtn" value="AddPlane" class="custom-button custom-button-primary">Add Plane</button>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <button type="submit" name="PlaneBtn" value="Reset" class="custom-button custom-button-secondary">Reset</button>
+                                </div>
+                            </div>
+
+
+
+                            if (ViewBag.msg != null)
+                            {
+                                <div class="row justify-content-center mt-3">
+                                    <div class="col-md-8 text-center">
+                                        <div class="status-message text-center">
+                                            <p class="status-message text-danger text-center">@ViewBag.msg</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/Scripts/Myscripts/EmailBlur.js"></script>
+
+@if (ViewBag.err != null)
+{
+    <script>
+        $("#HouseNo").removeAttr("disabled");
+        $("#City").removeAttr("disabled");
+        $("#State").removeAttr("disabled");
+        $("#Country").removeAttr("disabled");
+        $("#PinNo").removeAttr("disabled");
+        $("#AddressLine").removeAttr("disabled");
+        $("#OwnerName").removeAttr("disabled");
+    </script>
+}
+<!-- Modal for Owner Not Found -->
+<div class="modal fade" id="ownerNotFoundModal" tabindex="-1" aria-labelledby="ownerNotFoundModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ownerNotFoundModalLabel">Owner Not Found</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Kindly enter the owner details.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

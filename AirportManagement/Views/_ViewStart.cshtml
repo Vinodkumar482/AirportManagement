@@ -1,0 +1,15 @@
+﻿@{
+    if (Session["type"] == null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    //else if (Request.Cookies["utype"].Value.Equals("Admin"))
+    else if (Session["type"].Equals("Admin"))
+    {
+        Layout = "~/Views/Shared/_AdminMaster.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_ManagerMaster.cshtml";
+    }
+    }

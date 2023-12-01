@@ -1,0 +1,112 @@
+﻿﻿
+<link href="~/Content/HomePage/homepage.css" rel="stylesheet" type="text/css" runat="server" />
+@*<main>
+        <section class="row" aria-labelledby="aspnetTitle">
+            <h1 id="title">ASP.NET</h1>
+            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+            <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+        </section>
+
+        <div class="row">
+            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+                <h2 id="gettingStartedTitle">Getting started</h2>
+                <p>
+                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                    enables a clean separation of concerns and gives you full control over markup
+                    for enjoyable, agile development.
+                </p>
+                <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            </section>
+            <section class="col-md-4" aria-labelledby="librariesTitle">
+                <h2 id="librariesTitle">Get more libraries</h2>
+                <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+                <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+            </section>
+            <section class="col-md-4" aria-labelledby="hostingTitle">
+                <h2 id="hostingTitle">Web Hosting</h2>
+                <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+                <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            </section>
+        </div>
+    </main>*@
+<div class="home_section d-flex flex-column justify-content-center align-items-center mt-0 " id="HomeSection">
+    @*<video autoplay muted loop id="myVideo">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-dusk-from-the-boarding-area-of-an-airport-36351-large.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>*@
+    <div class="content-overlay">
+        <div class="animation-container text-center">
+            <h1 class="welcome_msg">Welcome to TechAir Hangar Management for Airports</h1>
+            <p class="caption">"Your trusted partner in advanced airport hangar management solutions."</p>
+        </div>
+        <a id="loginButton" href="@Url.Action("Index", "Login")">Login</a>
+    </div>
+    @*<div class="animation-container text-center">
+            <h1 class="welcome_msg">Welcome to TechAir Hanger Management for Airports</h1>
+            <p class="caption">"Your trusted partner in advanced airport hangar management solutions."</p>
+        </div>
+        <a id="loginButton" href="@Url.Action("Index", "Login")">Login</a>*@
+</div>
+<div class="about-bg pb-4" id="aboutus">
+    <div class="d-flex flex-row justify-content-center align-items-center">
+        <div class="about-section" id="AboutUs">
+            <h1>About Us</h1>
+            <p>Welcome to <span class="TechAir">TechAir</span>, your trusted partner in advanced airport hangar management solutions. At <span class="TechAir">TechAir</span>, we specialize in providing comprehensive and innovative tools designed to streamline and optimize the management of airport hangars. Our commitment to excellence and dedication to serving the aviation industry set us apart as a leader in the field.</p>
+
+            <h2>Our Vision</h2>
+            <p>At <span class="TechAir">TechAir</span>, we envision a future where airport hangar management is seamlessly integrated with cutting-edge technology. Our goal is to empower airport authorities, aviation companies, and hangar owners with powerful tools that enhance operational efficiency, increase transparency, and foster sustainable growth.</p>
+
+            <h2>Who We Are</h2>
+            <p>We are a team of aviation enthusiasts, technology experts, and industry professionals who share a common passion for transforming the way airport hangars are managed. With years of experience in the aviation and technology sectors, we understand the unique challenges faced by hangar operators. Our team is dedicated to developing solutions that address these challenges head-on, enabling our clients to focus on what they do best – delivering exceptional aviation services.</p>
+
+
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li>Expertise: Our team's deep understanding of aviation and technology ensures that our solutions are tailored to meet the unique needs of the aviation industry.</li>
+                <li>Innovation: We continuously strive to innovate and evolve our offerings to keep up with the latest trends and advancements in technology.</li>
+                <li>Support: We provide dedicated customer support to guide you through the implementation and use of our platform. Your success is our success.</li>
+                <li>Trust: Our reputation for reliability and integrity is built on the trust our clients place in us. We are committed to maintaining the highest standards of security and data privacy.</li>
+            </ul>
+        </div>
+        <div class="car-container">
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/Content/Images/1.png" class="d-block w-100 h-50 car-img" alt="Slide 1" />
+
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/Content/Images/2.png" class="d-block w-100 h-50 car-img" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.researchgate.net/profile/Janakiram-Karlapudi/publication/339326067/figure/fig3/AS:859870202966018@1582020440365/Pre-Engineered-Hangar-Structure-8_Q320.jpg" class="d-block w-100 h-50 car-img" alt="Slide 3">
+                    </div>
+                </div>
+
+                <!-- Carousel controls -->
+                <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <div class="text-center">
+        <a id="ExploreMoreBtn" href="@Url.Action("Services", "Home")" class="button-style">Explore More</a>
+    </div>
+
+</div>

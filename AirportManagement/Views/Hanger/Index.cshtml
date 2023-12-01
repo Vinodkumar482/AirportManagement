@@ -1,0 +1,195 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<section class="pilotform mt-3">
+    <div class="container pt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-8 col-lg-6 col-xl-7 mt-3 mb-3">
+                <div class="form-card mb-4" style="border-radius: 15px;">
+                    <div class="card-body marginclass" id="myForm">
+                        @using (Html.BeginForm())
+                        {
+                            <h2 class="form-name">Add Hanger Details</h2>
+                            <div class="row">
+                                <!-- First Part of the Form (Left Column) -->
+                                <div class="col-md-6">
+                                    <!-- ... (Existing code for the first part of the form) ... -->
+                                    <div class="row align-items-center pt-2 slide-in">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("Hanger Location")<span class="text-danger">*</span></h6>
+                                            @Html.TextBox("HangerLocation", null, new { @class = "custom-textbox" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("HangerLocation")
+                                        </div>
+
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Hanger Capacity")<span class="text-danger">*</span></h6>
+                                                @Html.TextBox("HangerCapacity", null, new { @class = "custom-textbox" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("HangerCapacity")
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Manager Name")<span class="text-danger">*</span></h6>
+                                                @Html.TextBox("ManagerName", null, new { @class = "custom-textbox" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("ManagerName")
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Social Security Number")<span class="text-danger">*</span></h6>
+                                                @Html.TextBox("SocialSecuirtyNo", null, new { @class = "custom-textbox" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("SocialSecuirtyNo")
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Date Of Birth")<span class="text-danger">*</span></h6>
+                                                @Html.TextBox("Dob", null, new { @class = "custom-textbox", type = "date" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("Dob")
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Gender")<span class="text-danger">*</span></h6>
+                                                @Html.DropDownList("Gender", new List<SelectListItem>
+                                         {
+                                                new SelectListItem { Value = "", Text = "Select" },
+                                                new SelectListItem { Value = "Male", Text = "Male" },
+                                                new SelectListItem { Value = "Female", Text = "Female" },
+                                                new SelectListItem { Value = "Others", Text = "Others" }
+                                         }, new { @class = "Gender-textbox" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("Gender")
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Mobile Number")<span class="text-danger">*</span></h6>
+                                                @Html.TextBox("MobileNo", null, new { @class = "custom-textbox" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("MobileNo")
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center pt-2">
+                                            <div class="col-md-12">
+                                                <h6 class="mb-1 label">@Html.Label("Email Address")<span class="text-danger">*</span></h6>
+                                                @Html.TextBox("Email", null, new { @class = "custom-textbox" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                @Html.ValidationMessage("Email")
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- Second Part of the Form (Right Column) -->
+                                <div class="col-md-6 slide-in">
+                                    <!-- ... (Existing code for the second part of the form) ... -->
+
+
+
+                                    <div class="row align-items-center pt-2">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("House Number")<span class="text-danger">*</span></h6>
+                                            @Html.TextBox("HouseNo", null, new { @class = "custom-textbox" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("HouseNo")
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center pt-2">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("City")<span class="text-danger">*</span></h6>
+                                            @Html.TextBox("City", null, new { @class = "custom-textbox" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("City")
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center pt-2">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("State")<span class="text-danger">*</span></h6>
+                                            @Html.TextBox("State", null, new { @class = "custom-textbox" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("State")
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center pt-2">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("Country")<span class="text-danger">*</span></h6>
+                                            @Html.TextBox("Country", null, new { @class = "custom-textbox" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("Country")
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center pt-2">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("Pincode")<span class="text-danger">*</span></h6>
+                                            @Html.TextBox("PinNo", null, new { @class = "custom-textbox" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("PinNo")
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center pt-2">
+                                        <div class="col-md-12">
+                                            <h6 class="mb-1 label">@Html.Label("AddressLine")<span class="text-danger">*</span></h6>
+                                            @Html.TextArea("AddressLine", null, new { @class = "custom-textarea" })
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.ValidationMessage("AddressLine")
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- Add Pilot and Reset Buttons -->
+                            <div class="row justify-content-center mt-4">
+                                <div class="col-md-4 text-center">
+                                    <button type="submit" name="HangerBtn" value="AddHanger" class="custom-button custom-button-primary">Add Hanger</button>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <button type="submit" name="HangerBtn" value="Reset" class="custom-button custom-button-secondary">Reset</button>
+                                </div>
+                            </div>
+
+
+
+                            if (ViewBag.msg != null)
+                            {
+                                <div class="row justify-content-center mt-3">
+                                    <div class="col-md-8 text-center">
+                                        <div class="status-message text-center">
+                                            <p class="status-message text-danger text-center">@ViewBag.msg</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

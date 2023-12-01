@@ -1,0 +1,102 @@
+﻿@model IEnumerable<AirportManagement.Models.Entities.Hanger>
+@{
+    ViewBag.Title = "GetStatus";
+}
+<div class="status-center-content">
+    <h2>Get Status</h2>
+    <div class="Get-hangers-form mt-4 p-5">
+        <div class="form-container">
+            @using (Html.BeginForm())
+            {
+                <label for="SelectedPlaneId" class="label">Select Hanger</label>
+                <select name="SelectedPlaneId" class="form-control" id="SelectedPlaneId">
+                    <option value="">Select a Hanger</option>
+                    @if (Model != null)
+                    {
+                        foreach (var hanger in Model)
+                        {
+                            <option value="@hanger.HangerId">@hanger.HangerId</option>
+                        }
+                    }
+                </select>
+                if (Model != null)
+                {
+                    foreach (var hanger in Model)
+                    {
+                        <input type="hidden" id="@($"L{hanger.HangerId}")" value="@hanger.HangerLocation" />
+                        <input type="hidden" id="@($"C{hanger.HangerId}")" value="@hanger.HangerCapacity" />
+                    }
+                }
+                <div class="pt-2">
+                    <div>
+                        <div><label for="FromDate" class="label">From Date</label></div>
+                        <div>@Html.TextBox("fromdate", null, new { type = "date", @class = "custom-textbox" })</div>
+                        <div>@Html.ValidationMessage("fromdate")</div>
+                    </div>
+                    <div class="pt-2">
+                        <div><label for="ToDate" class="label">To Date</label></div>
+                        <div>@Html.TextBox("todate", null, new { type = "date", @class = "custom-textbox" })</div>
+                        <div>@Html.ValidationMessage("todate")</div>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button type="button" id="Btnstatus" class="custom-button custom-button-primary">Get Status</button>
+                </div>
+            }
+        </div>
+
+    </div>
+    <div class="custom-table" id="AvailableHangers"></div>
+</div>
+
+@*@using (Html.BeginForm())
+    {
+        <select name="SelectedPlaneId" class="form-control" id="SelectedPlaneId">
+            <option value="">Select a Hanger</option>
+            @if (Model != null)
+            {
+                foreach (var hanger in Model)
+                {
+                    <option value="@hanger.HangerId">@hanger.HangerId</option>
+                }
+            }
+        </select>
+        if (Model != null)
+        {
+
+            foreach (var hanger in Model)
+            {
+                <input type="hidden" id="@($"L{hanger.HangerId}")" value="@hanger.HangerLocation" />
+                <input type="hidden" id="@($"C{hanger.HangerId}")" value="@hanger.HangerCapacity" />
+            }
+
+
+
+
+        }
+        @Html.TextBox("fromdate", null, new { type = "date" })
+        @Html.TextBox("todate", null, new { type = "date" })
+        <input type="button" id="Btnstatus" />
+    }
+    <table class="table table-striped" id="AvailableHangers"></table>*@
+<script src="~/Scripts/Myscripts/GetHangerStatus.js"></script>
+
+<div class="modal" id="StatusErrorModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Get Hanger Status</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Content goes here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>

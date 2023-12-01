@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "GetHangers";
+}
+
+<div class="center-form">
+    <div class="container d-flex flex-column align-items-center justify-content-between">
+        <div class="row">
+            <div class="col-md-12 Get-hangers-form">
+                <h2>GetHangers</h2>
+
+                @using (Html.BeginForm())
+                {
+                    <table>
+                        <tr>
+                            <td><label for="FromDate" class="label">From Date</label></td>
+                            <td>@Html.TextBox("FromDate", null, new { type = "date", id = "GetFromDate", @class = "custom-textbox" })</td>
+                            <td>@Html.ValidationMessage("FromDate")</td>
+                        </tr>
+                        <tr>
+                            <td><label for="ToDate" class="label">To Date</label></td>
+                            <td>@Html.TextBox("ToDate", null, new { type = "date", id = "GetToDate", @class = "custom-textbox" })</td>
+                            <td>@Html.ValidationMessage("ToDate")</td>
+                        </tr>
+                    </table>
+                    <div class="button-container">
+                        <button type="submit" name="GetHangersBtn" value="GetHangers" class="custom-button custom-button-primary" onclick="return CheckDates()">Get Hangers</button>
+                        <button type="submit" name="GetHangersBtn" value="Reset" class="custom-button custom-button-secondary">Reset</button>
+                    </div>
+                }
+                <div class="text-center">
+                    @if (ViewBag.msg != null)
+                    {
+                        <p class="text-danger text-center">@ViewBag.msg</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="DateErrorModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Book Hanger</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Content goes here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,120 @@
+﻿﻿.name {
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+
+
+.admin_card_img {
+    height: 350px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+.div1 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+.card {
+    position: absolute;
+    top: 12%;
+    left: 40%;
+    color: black;
+    /*background-color: rgb(0,0,0,0.8);*/
+    /*background-color:rgb(0,0,0,0.5);*/
+    /* background-color: rgb(104, 185, 212,0.8);*/
+    background-color: rgb(255,255,255,0.7);
+    /*background-image: linear-gradient(-45deg, #46b7d7,rgb(3,68,124,0.5));*/
+    height: 350px;
+    width: 240px;
+}
+
+.card2 {
+    position: absolute;
+    top: 12%;
+    left: 40%;
+    color: white;
+    background-color: rgb(0,0,0,0.5);
+    border-radius: 10px;
+    /*background-color:rgb(0,0,0,0.5);*/
+    /* background-color: rgb(104, 185, 212,0.8);*/
+    /*  background-color: rgb(255,255,255,0.7);*/
+    /*background-image: linear-gradient(-45deg, #46b7d7,rgb(3,68,124,0.5));*/
+    height: 350px;
+    width: 240px;
+}
+
+.div2 {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+}
+
+.div3 {
+    position: absolute;
+    top: 20%;
+    left: 75%;
+}
+
+
+
+.div1, .div2, .div3 {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+
+
+/* Animation for slide up */
+
+
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.div1 {
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+
+
+.div2 {
+    animation: slideUp 1s ease-in-out forwards 1s; /* Delay by 1 second */
+}
+
+
+
+.div3 {
+    animation: slideUp 1s ease-in-out forwards 2s; /* Delay by 2 seconds */
+}
+
+h3 {
+    padding: 15px;
+}
+
+p {
+    text-align: justify;
+    margin: 15px;
+    padding: 5px;
+}
