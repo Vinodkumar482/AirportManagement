@@ -53,7 +53,7 @@ namespace AirportManagement.Controllers
                             }
                             else
                             {
-                                ViewBag.msg = "Invalid_ credentials";
+                                ViewBag.msg = "Invalid credentials";
                                 return View();
                             }
                         }
