@@ -32,7 +32,7 @@ namespace AirportManagement.Controllers
                     ap = addingPlane.trim(ap);
                     using (var client = new HttpClient())
                     {
-                        client.BaseAddress = new Uri("https://localhost:44338/api/");
+                        client.BaseAddress = new Uri("https://airport-webapi-dev-demo.azurewebsites.net/api/");
                         var responseTask = client.PostAsJsonAsync<AddPlane>("Planes/AddPlane", ap);
                         responseTask.Wait();
                         var result = responseTask.Result;
@@ -76,7 +76,7 @@ namespace AirportManagement.Controllers
             Address address = null;
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44338/api/");
+                client.BaseAddress = new Uri("https://airport-webapi-dev-demo.azurewebsites.net/api/");
                 var responseTask = client.GetAsync("Planes/GetAddress?email=" + email);
                 responseTask.Wait();
                 var result = responseTask.Result;

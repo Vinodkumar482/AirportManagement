@@ -33,7 +33,7 @@ namespace AirportManagement.Controllers
                     Ah = addingHanger.trim(Ah);
                     using (var client = new HttpClient())
                     {
-                        client.BaseAddress = new Uri("https://localhost:44338/api/");
+                        client.BaseAddress = new Uri("https://airport-webapi-dev-demo.azurewebsites.net/api/");
                         var responseTask = client.PostAsJsonAsync<AddHanger>("HangerDetails/AddHanger", Ah);
                         responseTask.Wait();
                         var result = responseTask.Result;
@@ -92,7 +92,7 @@ namespace AirportManagement.Controllers
                 }
                 using (var client = new HttpClient())
                 {
-                    client.BaseAddress = new Uri("https://localhost:44338/api/");
+                    client.BaseAddress = new Uri("https://airport-webapi-dev-demo.azurewebsites.net/api/");
                     var query = $"HangerDetails/GetAvailableHangers?fromdate={FromDate}&todate={ToDate}";
 
 
@@ -150,7 +150,7 @@ namespace AirportManagement.Controllers
             b.HangerId = hangerId;
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44338/api/");
+                client.BaseAddress = new Uri("https://airport-webapi-dev-demo.azurewebsites.net/api/");
                 var responseTask = client.PostAsJsonAsync<Booking>("HangerDetails/AddBooking", b);
                 responseTask.Wait();
                 var result = responseTask.Result;
@@ -176,7 +176,7 @@ namespace AirportManagement.Controllers
             List<Hanger> st = null;
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44338/api/");
+                client.BaseAddress = new Uri("https://airport-webapi-dev-demo.azurewebsites.net/api/");
                 var responseTask = client.GetAsync("HangerDetails/GetAllHangers");
                 responseTask.Wait();
                 var result = responseTask.Result;
@@ -217,7 +217,7 @@ namespace AirportManagement.Controllers
             DateTime parsedToDate = DateTime.ParseExact(formattedToDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44338/api/");
+                client.BaseAddress = new Uri("https://airport-webapi-dev-demo.azurewebsites.net/api/");
                 var query = $"HangerDetails/GetAvailablePlanes?fromdate=" + FromDate + "&todate=" + ToDate;
 
 
@@ -251,7 +251,7 @@ namespace AirportManagement.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44338/api/");
+                client.BaseAddress = new Uri("https://airport-webapi-dev-demo.azurewebsites.net/api/");
                 var query = $"HangerDetails/GetAvailableHangers?fromdate=" + fromdate + "&todate=" + todate;
 
 
