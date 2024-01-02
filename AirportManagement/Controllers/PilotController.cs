@@ -31,7 +31,7 @@ namespace AirportManagement.Controllers
                     a = addingPilot.trim(a);
                     using (var client = new HttpClient())
                     {
-                        client.BaseAddress = new Uri("https://airport-webapi-dev-demo.azurewebsites.net/api/");
+                        client.BaseAddress = new Uri("https://airport-server.azurewebsites.net/api/");
                         var responseTask = client.PostAsJsonAsync<AddPilot>("Pilot/AddPilot", a);
                         responseTask.Wait();
                         var result = responseTask.Result;
