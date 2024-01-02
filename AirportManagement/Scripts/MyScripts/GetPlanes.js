@@ -27,7 +27,7 @@
                 
             };
             $.ajax({
-                url: "https://airportmanagement.azurewebsites.net/Hanger/GetPlanes?FromDate=" + fromdate + "&ToDate=" + todate,
+                url: "https://client-webapp.azurewebsites.net/Hanger/GetPlanes?FromDate=" + fromdate + "&ToDate=" + todate,
                 type: 'GET',
                 data: JSON.stringify(dateObject),
 

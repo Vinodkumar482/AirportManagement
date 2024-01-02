@@ -25,7 +25,7 @@
             // Perform validation or other checks if needed
             // Then send the email value to the controller using AJAX
             $.ajax({
-                url: "https://airport-server.azurewebsites.net/api/HangerDetails/GetStatus?HangerId=" + HangerId + "&fromdate=" + fromdate + "&todate=" + todate,
+                url: "https://server-webapi.azurewebsites.net/api/HangerDetails/GetStatus?HangerId=" + HangerId + "&fromdate=" + fromdate + "&todate=" + todate,
                 type: 'GET',
                 contentType: "application/json;charset=utf-8",
                 success: function (data) {
